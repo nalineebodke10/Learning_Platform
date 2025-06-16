@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Activity | LearnOnline</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fc;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: rgb(126, 188, 240);
+      height: 100vh;
+    }
+
+    .nav-link {
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: rgb(39, 105, 247) !important;
+    }
+
+    .nav-link i {
+      width: 20px;
+    }
+
+    .navbar {
+      background-color: white;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .navbar h5 {
+      color: #222;
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .activity-card {
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+    }
+
+    .table th {
+      background-color: #e9f3ff;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <nav class="sidebar p-3 position-fixed top-0 start-0 vh-100">
+      <h4 class="fw-bold mb-4 fs-4">LearnOnline</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="mentor_Dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> Mentor Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mentor_EnrollRequest.html"><i class="fas fa-user-check me-2"></i> Enroll Requests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mentor_manageCourses.html"><i class="fas fa-book me-2"></i> Manage Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-semibold" href="#"><i class="fas fa-users me-2"></i> User Activity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mentor_UserActivity.html"><i class="fas fa-cog me-2"></i> Settings</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1" style="margin-left: 250px;">
+      <!-- Top Navbar -->
+      <nav class="navbar px-4 py-3">
+        <div class="d-flex justify-content-between w-100 align-items-center">
+          <h5 class="mb-0">Welcome back, Nalinee !</h5>
+          <div class="d-flex align-items-center">
+            <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Mentor" />
+            <span class="fw-semibold text-dark">Nalinee</span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-4">
+        <h3 class="page-title mb-4"><i class="fas fa-users me-2 text-primary"></i>User Activity</h3>
+
+        <div class="activity-card">
+          <table class="table align-middle table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Last Login</th>
+                <th>Topics Completed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nalinee Bodke</td>
+                <td>Web Development</td>
+                <td>2025-06-14</td>
+                <td>8 / 10</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sanika Dhumale</td>
+                <td>Python Basics</td>
+                <td>2025-06-16</td>
+                <td>5 / 10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Shubhangi Pawar</td>
+                <td>Data Structures</td>
+                <td>2025-06-10</td>
+                <td>10 / 10</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Vaishnavi Dumbare</td>
+                <td>Machine Learning</td>
+                <td>2025-06-13</td>
+                <td>6 / 10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
