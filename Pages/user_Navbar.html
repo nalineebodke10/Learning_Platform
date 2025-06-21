@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        .navbar-brand,
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .nav-link.active {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .navbar {
+            background: rgb(132, 190, 237);
+        }
+
+    </style>
+    
+</head>
+<body>
+
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-dark fw-semibold fs-4" href="#">LearnOnline</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end text-dark" id="navbarNavAltMarkup">
+                <div class="navbar-nav align-items-center gap-3">
+                    <a class="nav-link text-dark fw-bold" href="#">Home</a>
+                    <a class="nav-link text-dark fw-bold" href="#">Courses</a>
+                    <a class="nav-link text-dark fw-bold" href="#">About Us</a>
+                    <a class="nav-link text-dark fw-bold" href="#">Contact</a>
+                    <button class="btn px-3 signup" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+</body>
+</html>

@@ -4,35 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Learning Platform</title>
+    <title>Learn Online</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Alex+Brush&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Estonia&family=Gwendolyn:wght@400;700&family=Jaini+Purva&family=Laila:wght@300..700&family=Merienda:wght@300..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Twinkle+Star&display=swap"
+        rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Estonia&family=Gwendolyn:wght@400;700&family=Jaini+Purva&family=Laila:wght@300;400;500;600;700&family=Merienda:wght@300..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Twinkle+Star&display=swap');
-
-        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Dancing+Script:wght@400..700&family=Estonia&family=Gwendolyn:wght@400;700&family=Jaini+Purva&family=Laila:wght@300;400;500;600;700&family=Merienda:wght@300..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Twinkle+Star&display=swap');
-
         body {
             font-family: 'Rubik';
-            background: linear-gradient(to right, #f8f9fa, #eaf4ff);
-            background: linear-gradient(to bottom right, #d6e4f0, #f0f4fd);
+            background: linear-gradient(to right, #f8f9fa, #f8fbfd);
+            background: linear-gradient(to bottom right, #f1f6fa, #f4f5f8);
             min-height: 100vh;
         }
 
-        .navbar_custom {
-            color: #111;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            font-weight: 500;
-        }
-
-        .nav-link.active {
-            font-weight: 600;
-            text-decoration: underline;
-        }
 
         .tagline {
             font-size: 14px;
@@ -65,10 +52,6 @@
             color: white;
             border: none;
             border-radius: 0 50px 50px 0;
-        }
-
-        .navbar {
-            background: rgb(132, 190, 237);
         }
 
         .signup {
@@ -109,6 +92,11 @@
             font-family: 'Rubik';
             text-align: center;
         }
+
+        .course_card_container {
+            width: 365px;
+        }
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -217,224 +205,145 @@
             background-color: #0a7cba;
         }
 
-        footer {
-            text-decoration: underline;
-            color: rgb(132, 190, 237) !important;
+        @media (max-width: 576px) {
+            .modal-dialog {
+                max-width: 95%;
+                margin: 1rem auto;
+            }
+        }
+
+        .services-contact-section {
+            background-color: #ffffff;
+            padding: 50px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-contact-section h2 {
+            margin-bottom: 25px;
+            color: #0d6efd;
+        }
+
+        .service-item {
+            margin-bottom: 20px;
+        }
+
+        .service-item i {
+            font-size: 24px;
+            color: #0d6efd;
+            margin-right: 10px;
+        }
+
+        .form-control,
+        .btn {
+            border-radius: 8px;
         }
 
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-                line-height: 1.5;
+            .services-contact-section {
+                padding: 30px 15px;
             }
-
-            h1,
-            .sub_heading,
-            .section-title {
-                font-size: 24px;
-            }
-
-            h2,
-            h3,
-            h4 {
-                font-size: 20px;
-            }
-
-            .tagline,
-            .description,
-            .section-subtitle,
-            .nav-link,
-            .navbar-brand,
-            .btn,
-            .btn_about_me,
-            .btn_visit_web {
-                font-size: 14px !important;
-            }
-
-            .btn_about_me,
-            .btn_visit_web {
-                padding: 8px 16px;
-            }
-
-            .course_card_container {
-                width: 100%;
-            }
-
-            .card-title,
-            .card-text {
-                font-size: 14px;
-            }
-
-            .feature-box,
-            .why-choose-us-card,
-            .team-card {
-                font-size: 14px;
-            }
-
-            .icon {
-                font-size: 1.8rem;
-            }
-
-            .login_submit_btn {
-                font-size: 14px;
-                padding: 10px 16px;
-            }
-
-            footer {
-                font-size: 13px;
-            }
-
-            
-        
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg  shadow-sm navbar-fixed top-0 navbar_custom">
-        <div class="container">
-            <a class="navbar-brand text-dark fw-semibold fs-4" href="#">LearnOnline</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container-fluid p-0">
+        <div id="user_Navbar"></div>
+        <!-- Main Section -->
+        <section class="py-5 main_section mt-4">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <p class="tagline">Best way to learn anywhere</p>
+                        <h1>Learn With Fun<br>And Any Schedule</h1>
+                        <p class="description">
+                            What is your daily homeschool schedule? How can you make it more fun, more engaging, and
+                            more
+                            educational?<br>
+                            Everyone's learning style is different.
+                        </p>
+                        <form class="d-flex search-bar bg-light rounded-pill overflow-hidden main_section_search_bar">
+                            <input type="text" class="form-control border-0 px-4 py-2 "
+                                 placeholder="What Do You Want To Learn?" />
+                                 
+                            <button type="submit" class="btn px-4">Search</button>
+                        </form>
+                    </div>
 
-            <div class="collapse navbar-collapse justify-content-end text-dark" id="navbarNavAltMarkup">
-                <div class="navbar-nav align-items-center gap-3">
-                    <a class="nav-link text-dark fw-bold" href="#">Home</a>
-                    <a class="nav-link text-dark fw-bold" href="#">Courses</a>
-                    <a class="nav-link text-dark fw-bold" href="#">About Us</a>
-                    <a class="nav-link text-dark fw-bold" href="#">Contact</a>
-                    <button class="btn px-3 signup">Sign Up</button>
+                    <!-- Right Column -->
+                    <div class="col-md-6 text-center">
+                        <img src="Images/learning.jpg" alt="Learning Image" class="img-fluid rounded" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Main Section -->
-    <section class="py-5 main_section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <!-- Left Column -->
-                <div class="col-md-6">
-                    <p class="tagline">Best way to learn anywhere</p>
-                    <h1>Learn With Fun<br>And Any Schedule</h1>
-                    <p class="description">
-                        What is your daily homeschool schedule? How can you make it more fun, more engaging, and more
-                        educational?<br>
-                        Everyone's learning style is different.
-                    </p>
-                    <form class="d-flex search-bar bg-light rounded-pill overflow-hidden main_section_search_bar">
-                        <input type="text" class="form-control border-0 px-4 py-2 "
-                            placeholder="What Do You Want To Learn?" />
-                        <button type="submit" class="btn px-4">Search</button>
-                    </form>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-md-6 text-center">
-                    <img src="Images/learning.jpg" alt="Learning Image" class="img-fluid rounded" />
-                </div>
+        <!-- Courses Section -->
+        <div class="m-5 ">
+            <div>
+                <h1 class="sub_heading mt-3 mb-4 text-align-center">Explore Our <span class="text-primary"> Top
+                        Courses</span></h1>
             </div>
-        </div>
-    </section>
+            <div class="courses_container">
+                <div id="card-container" class="row row-cols-1  row-cols-md-3 g-4  mt-3 p-0">
 
-    <!-- Courses Section -->
-    <div class="m-5 ">
-        <div>
-            <h1 class="sub_heading mt-3 mb-4 text-align-center">Explore Our <span class="text-primary"> Top
-                    Courses</span></h1>
-        </div>
-        <div class="courses_container">
-            <div id="card-container" class="row row-cols-1  row-cols-md-3 g-4 mt-3">
-
-                <div class="col ">
-                    <div class="card shadow-sm ">
-                        <img src="./Images/mern-course.png" class="card-img-top " alt="..." style="height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">MERN Stack Development</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <hr>
-                        <div class="card-body mb-2 ">
-                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                class="card-link" style="text-decoration: none;">
-                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                            </a>
+                    <div class="col course_card_container">
+                        <div class="card h-100 shadow-sm ">
+                            <img src="./Images/mern1.jpg" class="card-img-top " alt="..." style="height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">MERN Stack Development</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to
+                                    additional content. This content is a little bit longer.</p>
+                            </div>
+                            <hr>
+                            <div class="card-body mb-2 ">
+                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                    class="card-link" style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col ">
-                    <div class="card shadow-sm ">
-                        <img src="./Images/mern.png" class="card-img-top" alt="..." style="height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Java Full Stack Development</h5>
-                            <p class="card-text">This is a short card.lore Lorem ipsum dolor sit amet consectetur quam,
-                                voluptates labore explicabo a sunt hic consectetur?</p>
-                        </div>
-                        <hr>
-                        <div class="card-body mb-2 ">
-                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                class="card-link" style="text-decoration: none;">
-                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="card shadow-sm ">
-                        <img src="./Images/mern.png" class="card-img-top" alt="..." style="height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Software Testing Masterclass</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content.</p>
-                        </div>
-                        <hr>
-                        <div class="card-body mb-2 ">
-                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                class="card-link" style="text-decoration: none;">
-                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                            </a>
+                    <div class="col course_card_container">
+                        <div class="card shadow-sm h-100">
+                            <img src="./Images/java.jpg" class="card-img-top" alt="..." style="height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Java Full Stack Development</h5>
+                                <p class="card-text">This is a short card.lore Lorem ipsum dolor sit amet consectetur
+                                    quam,
+                                    voluptates labore explicabo a sunt hic consectetur?</p>
+                            </div>
+                            <hr>
+                            <div class="card-body mb-2 ">
+                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                    class="card-link" style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col ">
-                    <div class="shadow-sm card ">
-                        <img src="./Images/mern.png" class="card-img-top" alt="..." style="height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">AI & Machine Learning with Python</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <hr>
-                        <div class="card-body mb-2 ">
-                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                class="card-link" style="text-decoration: none;">
-                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="shadow-sm card ">
-                        <img src="./Images/mern.png" class="card-img-top" alt="..." style="height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">AI & Machine Learning with Python</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <hr>
-                        <div class="card-body mb-2 ">
-                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                class="card-link" style="text-decoration: none;">
-                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                            </a>
+                    <div class="col course_card_container">
+                        <div class="card shadow-sm h-100">
+                            <img src="./Images/softwaretesting.jpg" class="card-img-top" alt="..."
+                                style="height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Software Testing Masterclass</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in
+                                    to
+                                    additional content.</p>
+                            </div>
+                            <hr>
+                            <div class="card-body mb-2 ">
+                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                    class="card-link" style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -446,7 +355,7 @@
     <!-- why to Choose us  -->
     <section class="why-choose-us py-5">
         <div class="container text-center">
-            <h2 class="section-title mb-4">Why Choose <span class="highlight">Us</span>?</h2>
+            <h2 class="section-title mb-3">Why Choose <span class="highlight">Us</span>?</h2>
             <p class="section-subtitle mb-5">Empowering learners and educators with innovation, simplicity, and real
                 impact.</p>
 
@@ -527,150 +436,259 @@
                     <div class="col-sm-4 mb-3 mb-sm-0">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Web Development Mentor</h5>
+                                <p class="card-text">Empowering learners with hands-on web technologies — HTML, CSS,
+                                    JavaScript, and modern frameworks.</p>
+                                <a href="#" target="_blank" rel="noopener" class="card-link"
+                                    style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">View Profile</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Senior Data Science Mentor</h5>
+                                <p class="card-text">Turning data into insights using Python, machine learning, and
+                                    real-world case studies.</p>
+                                <a href="#" target="_blank" rel="noopener" class="card-link"
+                                    style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">View Profile</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Java & Backend Coach</h5>
+                                <p class="card-text">Simplifying backend concepts and Java fundamentals for robust
+                                    application development.</p>
+                                <a href="#" target="_blank" rel="noopener" class="card-link"
+                                    style="text-decoration: none;">
+                                    <button type="button" class="btn btn_about_me btn_visit_web">View Profile</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
-
-    <!-- Login/Register Modal (Hidden by default, shown after delay) -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Login / Register</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <div class="w-100 bg-white p-3 text-center">
+        <div class="container my-5 ">
+            <div class="services-contact-section row">
+                <!-- Left Side: Services -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="">Our Services</h2>
+                    <div class="service-item d-flex align-items-start">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <h5 class="mb-1">Web Development</h5>
+                            <p class="text-muted">Build modern websites using HTML, CSS, JS & React.</p>
+                        </div>
+                    </div>
+                    <div class="service-item d-flex align-items-start">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h5 class="mb-1">App Development</h5>
+                            <p class="text-muted">Cross-platform mobile applications using Flutter.</p>
+                        </div>
+                    </div>
+                    <div class="service-item d-flex align-items-start">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <h5 class="mb-1">Data Analytics</h5>
+                            <p class="text-muted">Insights from data using Python & machine learning.</p>
+                        </div>
+                    </div>
+                    <div class="service-item d-flex align-items-start">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>
+                            <h5 class="mb-1">Expert Mentoring</h5>
+                            <p class="text-muted">1-on-1 mentoring sessions with industry experts.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
+
+                <!-- Right Side: Contact Form -->
+                <div class="col-md-6">
+                    <h2>Contact Us</h2>
                     <form>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                required>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Role</label>
-                            <select class="form-select">
-                                <option value="student">Student</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="admin">Admin</option>
-                            </select>
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Type your message..."
+                                required></textarea>
                         </div>
-                        <button type="submit" class="btn login_submit_btn w-100">Continue</button>
+                        <a href="#" target="_blank" rel="noopener" class="card-link" style="text-decoration: none;">
+                            <button type="button" class="btn btn_about_me btn_visit_web w-100">send Message</button>
+                        </a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer pt-5 pb-4" style="background-color: rgb(132, 190, 237);">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
 
-                <!-- About + Social -->
-                <div class="col">
-                    <h5 class="fw-bold mb-3 text-black">LearnOnline</h5>
-                    <p class="text-dark small">Our platform offers interactive tools and flexible learning to make
-                        education engaging for all.</p>
-                    <div class="d-flex justify-content-start gap-3 mt-3">
-                        <a href="#" class="text-dark"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="#" class="text-dark"><i class="bi bi-github fs-5"></i></a>
-                        <a href="#" class="text-dark"><i class="bi bi-envelope-fill fs-5"></i></a>
-                        <a href="#" class="text-dark"><i class="bi bi-linkedin fs-5"></i></a>
+    <div id="footer"></div>
+
+
+    <!-- Login/Register Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="loginModalLabel">Welcome to LearnOnline</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs mb-3" id="loginTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="user-tab" data-bs-toggle="tab"
+                                data-bs-target="#userLogin" type="button" role="tab">User Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="teacher-tab" data-bs-toggle="tab"
+                                data-bs-target="#teacherLogin" type="button" role="tab">Teacher Login</button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!-- User Login Form -->
+                        <div class="tab-pane fade show active" id="userLogin" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="userEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="userEmail" placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="userPassword"
+                                        placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login as User</button>
+                            </form>
+                        </div>
+
+                        <!-- Teacher Login Form -->
+                        <div class="tab-pane fade" id="teacherLogin" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="teacherEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="teacherEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="teacherPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="teacherPassword"
+                                        placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Login as Teacher</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Register Toggle Button -->
+                    <div class="text-center mt-4">
+                        <p>Don't have an account? <a href="#" id="showRegister">Register Here</a></p>
+                    </div>
+
+                    <!-- Hidden Register Form -->
+                    <div id="registerForm" class="mt-3 d-none">
+                        <h5 class="text-center mb-3">Register New Account</h5>
+                        <form>
+                            <div class="mb-2">
+                                <input type="text" class="form-control" placeholder="Full Name">
+                            </div>
+                            <div class="mb-2">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="mb-2">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="mb-2">
+                                <select class="form-select">
+                                    <option selected disabled>Select Role</option>
+                                    <option value="user">User</option>
+                                    <option value="teacher">Teacher</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100">Register</button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="col">
-                    <h5 class="fw-bold mb-3 text-black">Quick Links</h5>
-                    <ul class="list-unstyled text-dark small">
-                        <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">Courses</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">About Us</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">Sign Up</a></li>
-                    </ul>
-                </div>
-
-                <!-- Feedback Form -->
-                <div class="col">
-                    <h5 class="fw-bold mb-3 text-black">Feedback</h5>
-                    <form>
-                        <div class="mb-2">
-                            <input type="text" class="form-control form-control-sm" placeholder="Your Name">
-                        </div>
-                        <div class="mb-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Your Email">
-                        </div>
-                        <div class="mb-2">
-                            <textarea class="form-control form-control-sm" rows="2"
-                                placeholder="Your Feedback"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark btn-sm">Submit</button>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="col">
-                    <h5 class="fw-bold mb-3 text-black">Contact Us</h5>
-                    <p class="text-dark small"><i class="bi bi-geo-alt-fill me-2"></i>123, Main Street, Pune, India</p>
-                    <p class="text-dark small"><i class="bi bi-telephone-fill me-2"></i>+91 87672 02017</p>
-                    <p class="text-dark small"><i class="bi bi-envelope-fill me-2"></i>info@learnonline.com</p>
-                </div>
-
-            </div>
-
-            <hr class="border-dark mt-4">
-
-            <div class="text-center text-dark">
-                <p class="mb-0 small">&copy; 2025 LearnOnline. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
-
+    </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        // Show modal after 1.5 minutes
-        setTimeout(() => {
-            const authModal = new bootstrap.Modal(document.getElementById('authModal'));
-            authModal.show();
-        }, 90000); // 90 seconds = 1.5 mins
+
+        // Load navbar from external file
+        fetch("/Pages/user_navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("user_Navbar").innerHTML = data;
+            });
+
+
+        // Load footer from external file
+        fetch("/Pages/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const showRegister = document.getElementById("showRegister");
+        const registerForm = document.getElementById("registerForm");
+        const loginTabs = document.querySelector(".nav-tabs");
+        const loginContent = document.querySelector(".tab-content");
+
+        // Add 'Back to Login' dynamically
+        const backToLoginLink = document.createElement("p");
+        backToLoginLink.classList.add("text-center", "mt-3");
+        backToLoginLink.innerHTML = `Already have an account? <a href="#" id="backToLogin">Back to Login</a>`;
+        registerForm.appendChild(backToLoginLink);
+
+        showRegister.addEventListener("click", function (e) {
+            e.preventDefault();
+            loginTabs.classList.add("d-none");
+            loginContent.classList.add("d-none");
+            registerForm.classList.remove("d-none");
+        });
+
+        registerForm.addEventListener("click", function (e) {
+            if (e.target && e.target.id === "backToLogin") {
+                e.preventDefault();
+                loginTabs.classList.remove("d-none");
+                loginContent.classList.remove("d-none");
+                registerForm.classList.add("d-none");
+            }
+        });
+    </script>
+
+
+
 </body>
 
 </html>

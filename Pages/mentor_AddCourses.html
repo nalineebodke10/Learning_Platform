@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Add / Edit Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f2f6fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .sidebar {
+      background: rgb(118, 191, 250);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+    }
+
+    .nav li a {
+      text-decoration: none;
+      color: black !important;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav li a:hover,
+    .nav li a.active {
+      color: white !important;
+      background-color: rgb(4, 91, 221);
+    }
+
+    .main-content {
+      padding: 30px;
+      flex-grow: 1;
+    }
+
+    .container {
+      max-width: 900px;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .sub-topic-group {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .remove-btn {
+      margin-top: 5px;
+    }
+
+    @media (max-width: 991.98px) {
+      #sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1050;
+        transition: left 0.3s ease;
+      }
+
+      #sidebar.active {
+        left: 0;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+      }
+
+      .overlay.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="d-flex">
+    <!-- Sidebar -->
+
+    <nav class="border-end p-3 sidebar" id="sidebar" style="width: 250px;">
+            <div class="p-4">
+                <h4 class="fw-bold mb-4 text-dark">LearnOnline</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="admin_Dashboard.html"><i
+                                class="fas fa-home me-2"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin_student.html"><i
+              class="fas fa-user-graduate me-2"></i>Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin_Teacher.html"><i
+              class="fas fa-chalkboard-teacher me-2"></i>Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admin_Courses.html"><i
+                                class="fas fa-book me-2"></i>Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-book me-2"></i>Courses</a>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-download me-2"></i>Report</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 bg-light">
+      <nav class="navbar navbar-light bg-white px-4 border-bottom">
+        <span class="navbar-brand mb-0 h4">Add / Edit Course</span>
+      </nav>
+
+      <div class="container mt-4">
+        <div class="card p-4">
+          <h3 class="mb-4">Add / Edit Course</h3>
+          <form id="courseForm">
+            <div class="mb-3">
+              <label for="courseTitle" class="form-label">Course Title</label>
+              <input type="text" class="form-control" id="courseTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="courseDescription" class="form-label">Course Description</label>
+              <textarea class="form-control" id="courseDescription" rows="2" required></textarea>
+            </div>
+
+            <div id="subTopicContainer">
+              <div class="sub-topic-group">
+                <div class="mb-2">
+                  <label class="form-label">Course Sub Topic</label>
+                  <input type="text" class="form-control" name="subTopic[]" required>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label">Sub Topic Description</label>
+                  <textarea class="form-control" name="subDescription[]" rows="2" required></textarea>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label">Demo Code</label>
+                  <textarea class="form-control" name="demoCode[]" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-danger btn-sm remove-btn d-none">Remove</button>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary mt-2" id="addMore">+ Add More Sub Topic</button>
+
+            <div class="mt-4">
+              <button type="submit" class="btn btn-success">Save Course</button>
+              <a href="mentor_manageCourses.html" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const subTopicContainer = document.getElementById("subTopicContainer");
+    const addMoreBtn = document.getElementById("addMore");
+
+    addMoreBtn.addEventListener("click", () => {
+      const newGroup = document.createElement("div");
+      newGroup.classList.add("sub-topic-group");
+
+      newGroup.innerHTML = `
+        <div class="mb-2">
+          <label class="form-label">Course Sub Topic</label>
+          <input type="text" class="form-control" name="subTopic[]" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Sub Topic Description</label>
+          <textarea class="form-control" name="subDescription[]" rows="2" required></textarea>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Demo Code</label>
+          <textarea class="form-control" name="demoCode[]" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-danger btn-sm remove-btn">Remove</button>
+      `;
+
+      subTopicContainer.appendChild(newGroup);
+
+      newGroup.querySelector(".remove-btn").addEventListener("click", () => {
+        newGroup.remove();
+      });
+    });
+
+    document.getElementById("courseForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Course saved successfully! (Now handle with JavaScript or backend)");
+    });
+  </script>
+</body>
+
+</html>
