@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+/* admin side dashboard */
+
+.nav li a {
+    text-decoration: none;
+    color: black !important;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-stat {
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.card-stat h5 {
+    font-size: 1rem;
+}
+
+.card-stat p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.info-card {
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card1 {
+    background: #4F6D7A;
+}
+
+.card2 {
+    background: #F4B400;
+}
+
+.card3 {
+    background: #00ACC1;
+}
+
+.card4 {
+    background: #EF5350;
+}
+
+@media (max-width: 768px) {
+    .card-body.d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .container.mt-5 h2 {
+        font-size: 1.4rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        margin-left: 237px;
+        transition: margin-left 0.3s ease;
+    }
+}
+@media (max-width: 992px) {
+    .main-content {
+      
+          width: 100% !important;
+      
+    }
+}
+.main-content>* {
+    width: 100%;
+}
+
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    h3.page-title {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 13px;
+    }
+
+    .navbar h5 {
+        font-size: 16px;
+    }
+}
+
+
+/* courses */
+
+.courses_container {
+    margin: 30px auto;
+    display: block;
+    width: 90%;
+}
+
+.sub_heading {
+    color: #282828;
+    font-size: 40px;
+    font-family: 'Rubik';
+    text-align: center;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border: solid 2px rgb(6, 141, 251);
+}
+
+.btn_about_me {
+    color: #c6c5c5;
+    cursor: pointer;
+    border: 2px #b6b5b5 solid;
+    margin-left: 26%;
+}
+
+.btn_about_me:hover {
+    color: #fffbfb;
+    cursor: pointer;
+    border: 2px #b8b8b8 solid;
+    background-color: #2c2c2c;
+}
+
+.modal-backdrop {
+    opacity: 0.5 !important;
+}
+
+.btn_visit_web {
+    background-color: #2897d3;
+    color: #fff;
+    border: #007bff;
+    box-shadow: 0px 0px 3px 3px #ebeaea;
+    font-family: 'Rubik';
+    display: block;
+    margin: auto;
+    text-decoration: none;
+
+}
+
+.btn_visit_web:hover {
+    background-color: #0a7cba;
+    color: #fff;
+    border: #007bff;
+}
+
+@media screen and (max-width: 552px) {
+    .btn {
+        transform: scale(0.7);
+    }
+
+    .course-heading {
+        font-size: 1.1rem;
+    }
+
+}

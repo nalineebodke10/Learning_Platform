@@ -28,7 +28,7 @@
       .then(data => {
         const closeBtn = `
       <div class="text-end p-2 d-md-none">
-        <button class="btn btn-light btn-sm" onclick="hideSidebar()">
+        <button class="btn  btn-sm" onclick="hideSidebar()">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>

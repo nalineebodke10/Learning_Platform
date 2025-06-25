@@ -27,6 +27,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+.card-border{
+    border: 1px solid #8a8a8b  ;
+}
+
 .navbar {
     background-color: white;
     border-bottom: 1px solid #dee2e6;
@@ -86,25 +90,38 @@ body {
     }
 }
 
- @media (max-width: 576px) {
-            body {
-                font-size: 14px;
-            }
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
 
-            h3.page-title {
-                font-size: 18px;
-            }
+    h3.page-title {
+        font-size: 18px;
+    }
 
-            .btn {
-                font-size: 14px;
-            }
+    .btn {
+        font-size: 14px;
+    }
 
-            .table th,
-            .table td {
-                font-size: 13px;
-            }
+    .table th,
+    .table td {
+        font-size: 13px;
+    }
 
-            .navbar h5 {
-                font-size: 16px;
+    .navbar h5 {
+        font-size: 16px;
+    }
+}
+
+ @media screen and (max-width: 552px) {
+            .btn{
+                transform: scale(0.7);
             }
+            
         }
+
+
+
+
+
+

@@ -9,7 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
- <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -18,128 +18,138 @@
     <!-- Sidebar for large screens -->
     <div id="mentor_Sidebar" class="d-none d-lg-block ">
 
-    </div> 
+    </div>
 
     <!-- Main Content -->
     <div class="flex-grow main-content bg-light container-fluid p-0 " id="mainContent">
 
-    <!-- Navbar -->
-    <nav class="navbar px-4 py-3">
-      <div class="d-flex justify-content-between w-100 align-items-center">
-        <div>
-          <button class="btn btn-outline-secondary toggle-btn " onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
-          </button>
+      <!-- Navbar -->
+      <nav class="navbar px-4 py-3">
+        <div class="d-flex justify-content-between w-100 align-items-center">
+          <div>
+            <button class="btn btn-outline-secondary toggle-btn " onclick="toggleSidebar()">
+              <i class="fas fa-bars"></i>
+            </button>
 
-          <h5 class="d-inline-block mb-0 ms-2">Mentor Dashboard</h5>
+            <h5 class="d-inline-block mb-0 ms-2">Mentor Dashboard</h5>
+          </div>
+          <div class="mentor-info">
+            <span class="fw-semibold text-dark">Nalinee</span>
+          </div>
         </div>
-        <div class="mentor-info">
-          <span class="fw-semibold text-dark">Nalinee</span>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="container-fluid p-4">
-      <!-- Stats Cards -->
-      <div class="row g-4">
-        <div class="col-md-3 col-6 course-card" >
-          <div class="card-stat bg-primary">
-            <h5>Total Courses</h5>
-            <p>12</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6 course-card">
-          <div class="card-stat bg-success">
-            <h5>Enroll Requests</h5>
-            <p>5</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6 course-card">
-          <div class="card-stat bg-warning">
-            <h5>Active Students</h5>
-            <p>48</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6 course-card">
-          <div class="card-stat bg-danger">
-            <h5>Pending Reviews</h5>
-            <p>3</p>
-          </div>
-        </div>
-      </div>
+      <div class="container-fluid p-4">
+        <!-- Stats Cards -->
+        <div class="row g-4">
+          <div class="col-md-3 col-6 course-card">
+            <div class="card-stat bg-primary shadow-sm card-border d-flex align-items-center justify-content-between">
+              <div>
+                <h5>Total Courses</h5>
+                <p>12</p>
+              </div>
+              <i class="fas fa-book fs-1 opacity-75"></i>
 
-      <hr>
-
-      <!-- Student Activity and Actions -->
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="info-card">
-            <h5 class="section-title">Student Activity</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Nalinee Bodke - Last Visit: 2 days ago - Topics Covered: 8/10</li>
-              <li class="list-group-item">Sanika Dhumale - Last Visit: Today - Topics Covered: 5/10</li>
-              <li class="list-group-item">Shubhangi - Last Visit: 5 days ago - Topics Covered: 10/10</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info-card">
-            <h5 class="section-title">Quick Actions</h5>
-            <button class="btn btn-outline-primary w-100 mb-2">Add New Course</button>
-            <button class="btn btn-outline-success w-100 mb-2">Approve Enrollments</button>
-            <button class="btn btn-outline-secondary w-100">View All Users</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Messages -->
-      <div class="row g-4 mt-3">
-        <div class="col-md-6">
-          <div class="info-card">
-            <h5 class="mb-3">Recent Messages</h5>
-            <div class="mb-3">
-              <strong>Alicia:</strong>
-              <p class="mb-0 text-muted small">Thanks for the class notes, really helpful!</p>
             </div>
-            <div class="mb-3">
-              <strong>Kevin:</strong>
-              <p class="mb-0 text-muted small">Can we reschedule tomorrow’s session?</p>
+          </div>
+          <div class="col-md-3 col-6 course-card">
+            <div class="card-stat bg-success shadow-sm card-border d-flex align-items-center justify-content-between">
+              <div>
+                <h5>Enroll Requests</h5>
+                <p>5</p>
+              </div>
+              <i class="fas fa-user-graduate fs-1 opacity-75"></i>
             </div>
-            <div class="mb-3">
-              <strong>Sara:</strong>
-              <p class="mb-0 text-muted small">I submitted the assignment on time.</p>
+          </div>
+          <div class="col-md-3 col-6 course-card">
+            <div class="card-stat bg-warning shadow-sm card-border d-flex align-items-center justify-content-between">
+              <div>
+                <h5>Active Students</h5>
+                <p>48</p>
+              </div>
+              <i class="fas fa-users fs-1 opacity-75"></i>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 course-card">
+            <div class="card-stat bg-danger card-border">
+              <h5>Pending Reviews</h5>
+              <p>3</p>
             </div>
           </div>
         </div>
-      </div>
 
+        <hr>
+
+        <!-- Student Activity and Actions -->
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="info-card">
+              <h5 class="section-title">Student Activity</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nalinee Bodke - Last Visit: 2 days ago - Topics Covered: 8/10</li>
+                <li class="list-group-item">Sanika Dhumale - Last Visit: Today - Topics Covered: 5/10</li>
+                <li class="list-group-item">Shubhangi - Last Visit: 5 days ago - Topics Covered: 10/10</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-card">
+              <h5 class="section-title">Quick Actions</h5>
+              <button class="btn btn-outline-primary w-100 mb-2">Add New Course</button>
+              <button class="btn btn-outline-success w-100 mb-2">Approve Enrollments</button>
+              <button class="btn btn-outline-secondary w-100">View All Users</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="row g-4 mt-3">
+          <div class="col-md-6">
+            <div class="info-card">
+              <h5 class="mb-3">Recent Messages</h5>
+              <div class="mb-3">
+                <strong>Alicia:</strong>
+                <p class="mb-0 text-muted small">Thanks for the class notes, really helpful!</p>
+              </div>
+              <div class="mb-3">
+                <strong>Kevin:</strong>
+                <p class="mb-0 text-muted small">Can we reschedule tomorrow’s session?</p>
+              </div>
+              <div class="mb-3">
+                <strong>Sara:</strong>
+                <p class="mb-0 text-muted small">I submitted the assignment on time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-  </div>
 
-  
+
   <script>
-  function adjustCourseCardColumns() {
-    const cards = document.querySelectorAll('.course-card');
+    function adjustCourseCardColumns() {
+      const cards = document.querySelectorAll('.course-card');
 
-    cards.forEach(card => {
-      if (window.innerWidth <= 400) {
-        card.classList.remove('col-6');
-        card.classList.add('col-12');
-      } else {
-        card.classList.remove('col-12');
-        card.classList.add('col-6');
-      }
-    });
-  }
+      cards.forEach(card => {
+        if (window.innerWidth <= 400) {
+          card.classList.remove('col-6');
+          card.classList.add('col-12');
+        } else {
+          card.classList.remove('col-12');
+          card.classList.add('col-6');
+        }
+      });
+    }
 
-  // Run when page loads
-  window.addEventListener('load', adjustCourseCardColumns);
+    // Run when page loads
+    window.addEventListener('load', adjustCourseCardColumns);
 
-  // Run when window is resized
-  window.addEventListener('resize', adjustCourseCardColumns);
-</script>
-<script src="./mentor_Sidebar_.js"></script>
+    // Run when window is resized
+    window.addEventListener('resize', adjustCourseCardColumns);
+  </script>
+  <script src="./mentor_Sidebar_.js"></script>
 
 
 
