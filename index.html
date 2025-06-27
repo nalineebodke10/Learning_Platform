@@ -15,9 +15,10 @@
     <style>
         body {
             font-family: 'Rubik';
-            background: linear-gradient(to right, #f8f9fa, #f8fbfd);
-            background: linear-gradient(to bottom right, #f1f6fa, #f4f5f8);
+            background: linear-gradient(to right, #f3f8fa, #f3f8fa);
+            background: linear-gradient(to bottom right, #f3f8fa, #f3f8fa);
             min-height: 100vh;
+
         }
 
 
@@ -34,13 +35,6 @@
             color: #111;
             line-height: 1.2;
 
-        }
-
-        .description {
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 30px;
-            line-height: 1.6;
         }
 
         .main_section_search_bar {
@@ -80,30 +74,6 @@
             background-color: #fff;
         }
 
-        .courses_container {
-            margin: 30px auto;
-            display: block;
-            width: 90%;
-        }
-
-        .sub_heading {
-            color: #282828;
-            font-size: 40px;
-            font-family: 'Rubik';
-            text-align: center;
-        }
-
-        .course_card_container {
-            width: 365px;
-        }
-
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            border: solid 2px rgb(6, 141, 251);
-        }
 
         .btn_about_me {
             color: #c6c5c5;
@@ -160,7 +130,7 @@
             background-color: #9dd7fc !important;
         }
 
-        .why_us_card{
+        .why_us_card {
             border: 1PX solid #f6f6f6;
         }
 
@@ -249,6 +219,38 @@
                 padding: 30px 15px;
             }
         }
+
+        @media (max-width: 776px) {
+            .course_card_container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .course_card_container .card {
+                width: 280px;
+                /* Make it narrower */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .course_card_container .card .card-title {
+                font-size: 1rem;
+                /* Smaller heading for mobile */
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .course_card_container .card .card-text {
+                font-size: 0.875rem;
+                /* Smaller body text */
+                line-height: 1.4;
+                text-align: justify;
+            }
+
+            .course_card_container .card .btn_visit_web {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -271,8 +273,8 @@
                         </p>
                         <form class="d-flex search-bar bg-light rounded-pill overflow-hidden main_section_search_bar">
                             <input type="text" class="form-control border-0 px-4 py-2 "
-                                 placeholder="What Do You Want To Learn?" />
-                                 
+                                placeholder="What Do You Want To Learn?" />
+
                             <button type="submit" class="btn px-4">Search</button>
                         </form>
                     </div>
@@ -285,70 +287,66 @@
             </div>
         </section>
 
-        <!-- Courses Section -->
-        <div class="m-5 ">
-            <div>
-                <h1 class="sub_heading mt-3 mb-4 text-align-center">Explore Our <span class="text-primary"> Top
-                        Courses</span></h1>
-            </div>
-            <div class="courses_container">
-                <div id="card-container" class="row row-cols-1  row-cols-md-3 g-4  mt-3 p-0">
 
-                    <div class="col course_card_container">
-                        <div class="card h-100 shadow-sm ">
-                            <img src="./Images/mern1.jpg" class="card-img-top " alt="..." style="height: 200px;">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">MERN Stack Development</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in
-                                    to
-                                    additional content. This content is a little bit longer.</p>
-                            </div>
-                            <hr>
-                            <div class="card-body mb-2 ">
-                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                    class="card-link" style="text-decoration: none;">
-                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                                </a>
-                            </div>
+        <!-- Courses Section -->
+        <div class="container mt-5 text-center">
+            <h2 class="section-title mb-3">Explore Our <span class="highlight">Top Courses</span></h2>
+            <div id="card-container" class="row g-4  mt-3 p-0">
+
+                <div class="col-lg-4 col-md-6 col-sm-7 course_card_container">
+                    <div class="card shadow-sm ">
+                        <img src="./Images/mern1.jpg" class="card-img-top " alt="..." style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Frontend Development</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural
+                                lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <hr>
+                        <div class="card-body mb-2 ">
+                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                class="card-link" style="text-decoration: none;">
+                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                            </a>
                         </div>
                     </div>
-                    <div class="col course_card_container">
-                        <div class="card shadow-sm h-100">
-                            <img src="./Images/java.jpg" class="card-img-top" alt="..." style="height: 200px;">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Java Full Stack Development</h5>
-                                <p class="card-text">This is a short card.lore Lorem ipsum dolor sit amet consectetur
-                                    quam,
-                                    voluptates labore explicabo a sunt hic consectetur?</p>
-                            </div>
-                            <hr>
-                            <div class="card-body mb-2 ">
-                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                    class="card-link" style="text-decoration: none;">
-                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                                </a>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-7 course_card_container">
+                    <div class="card shadow-sm">
+                        <img src="./Images/java.jpg" class="card-img-top" alt="..." style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Java Backend Development</h5>
+                            <p class="card-text">This is a short card.lore Lorem ipsum dolor sit amet
+                                consectetur
+                                quam,
+                                voluptates labore explicabo a sunt hic consectetur?</p>
+                        </div>
+                        <hr>
+                        <div class="card-body mb-2 ">
+                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                class="card-link" style="text-decoration: none;">
+                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                            </a>
                         </div>
                     </div>
-                    <div class="col course_card_container">
-                        <div class="card shadow-sm h-100">
-                            <img src="./Images/softwaretesting.jpg" class="card-img-top" alt="..."
-                                style="height: 200px;">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Software Testing Masterclass</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in
-                                    to
-                                    additional content.</p>
-                            </div>
-                            <hr>
-                            <div class="card-body mb-2 ">
-                                <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
-                                    class="card-link" style="text-decoration: none;">
-                                    <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
-                                </a>
-                            </div>
+                </div>
+                <div class=" col-lg-4 col-md-6 col-sm-7 course_card_container">
+                    <div class="card shadow-sm h-100">
+                        <img src="./Images/softwaretesting.jpg" class="card-img-top" alt="..." style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Software Testing</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural
+                                lead-in
+                                to
+                                additional content.</p>
+                        </div>
+                        <hr>
+                        <div class="card-body mb-2 ">
+                            <a href="https://kidsquizzland.netlify.app/" target="_blank" rel="noopener"
+                                class="card-link" style="text-decoration: none;">
+                                <button type="button" class="btn btn_about_me btn_visit_web">Know More</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -487,9 +485,9 @@
         <div class="container my-5 ">
             <h2 class="fw-bold mb-3">Contact <span class="text-primary">Us</span></h2>
             <div class="services-contact-section row col-md-6 d-flex justify-content-center mx-auto">
-                
+
                 <div class="">
-                   
+
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Your Name</label>
@@ -537,6 +535,10 @@
                             <button class="nav-link" id="teacher-tab" data-bs-toggle="tab"
                                 data-bs-target="#teacherLogin" type="button" role="tab">Teacher Login</button>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="admiin-tab" data-bs-toggle="tab"
+                                data-bs-target="#adminLogin" type="button" role="tab">Admin Login</button>
+                        </li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -571,6 +573,23 @@
                                         placeholder="Password">
                                 </div>
                                 <button type="submit" class="btn btn-success w-100">Login as Teacher</button>
+                            </form>
+                        </div>
+
+                        <!-- Admin Login Form -->
+                        <div class="tab-pane fade" id="adminLogin" role="tabpanel">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="adminEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="adminEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="adminPassword"
+                                        placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Login as Admin</button>
                             </form>
                         </div>
                     </div>
@@ -659,6 +678,30 @@
             }
         });
     </script>
+
+    <script>
+        function adjustCourseCardColumns() {
+            const cards = document.querySelectorAll('.course-card');
+
+            cards.forEach(card => {
+                if (window.innerWidth <= 400) {
+                    card.classList.remove('col-6');
+                    card.classList.add('col-12');
+                } else {
+                    card.classList.remove('col-12');
+                    card.classList.add('col-6');
+                }
+            });
+        }
+
+        // Run when page loads
+        window.addEventListener('load', adjustCourseCardColumns);
+
+        // Run when window is resized
+        window.addEventListener('resize', adjustCourseCardColumns);
+    </script>
+
+
 
 
 
